@@ -1,0 +1,25 @@
+server:
+  port: 8098
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://a35662721696611e9a6960a975a2ca3f-1870448524.us-east-1.elb.amazonaws.com:8761/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: student-service
+    
+
+  
+management:
+  security:
+    enabled: false
+
